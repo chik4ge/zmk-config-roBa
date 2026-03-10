@@ -80,7 +80,7 @@
 &kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
 &kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 TAB  &kp K          &kp T  &kp N  &kp S  &kp H
 &mt LEFT_SHIFT Y  &kp X         &kp C         &kp V                     &kp SEMICOLON  &kp MINUS                     &kp ESC               &kp G          &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 JP_EISU  &lt 3 SPACE    &lt_to_layer_0 2 JP_KANA      &kp ENTER             &kp BACKSPACE                       &mo 6
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 JP_EISU  &lt 4 SPACE    &lt_to_layer_0 2 JP_KANA      &kp ENTER             &kp BACKSPACE                       &mo 6
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
