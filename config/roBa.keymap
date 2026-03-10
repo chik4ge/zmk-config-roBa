@@ -52,35 +52,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 JP_EISU>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp JP_DQUOTE>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp JP_EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
-
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
