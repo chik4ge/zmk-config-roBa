@@ -17,33 +17,33 @@ layers:
   - O
   - /
   - '&mkp MB3'
-  - {t: '&to_layer_0 TAB', h: FUNCTION}
+  - {t: '&to_layer_0 MINUS', h: FUNCTION}
   - K
   - T
   - N
   - S
   - H
-  - {t: Y, h: LEFT SHIFT}
+  - Y
   - X
   - C
   - V
   - {t: ;, s: ''''}
-  - {t: '-', s: Sft+0x87}
-  - ESC
+  - {t: '&to_layer_0 LANGUAGE_2', h: ARROW}
+  - {t: '&to_layer_0 LANGUAGE_1', h: NUM_SYMBOL}
   - G
   - D
   - M
   - J
-  - {t: B, h: RIGHT SHIFT}
+  - B
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_layer_0 LANGUAGE_2', h: ARROW}
+  - {t: '&to_layer_0 LS(NUMBER_1)', h: BLUETOOTH}
+  - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
-  - {t: '&to_layer_0 LANGUAGE_1', h: NUM_SYMBOL}
   - ENTER
   - BACKSPACE
-  - BLUETOOTH
+  - RIGHT SHIFT
   FUNCTION:
   - {t: ▽, type: trans}
   - F1
@@ -117,7 +117,7 @@ layers:
   - '9'
   - '"'
   - _
-  - {t: ▽, type: trans}
+  - {type: held}
   - '}'
   - '|'
   - \
@@ -128,7 +128,7 @@ layers:
   - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -160,17 +160,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -215,8 +215,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -259,8 +259,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,9 +302,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+- p: [10, 11]
+  k: TAB

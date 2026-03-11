@@ -94,9 +94,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
-&kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 TAB  &kp K          &kp T  &kp N  &kp S  &kp H
-&mt LEFT_SHIFT Y  &kp X         &kp C         &kp V                     &semi_colon_jp &minus_jp                     &kp ESC               &kp G          &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 JP_EISU  &lt 4 SPACE    &lt_to_layer_0 2 JP_KANA      &kp ENTER             &kp BACKSPACE                       &mo 6
+&kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 MINUS  &kp K          &kp T  &kp N  &kp S  &kp H
+&kp Y             &kp X         &kp C         &kp V                     &semi_colon_jp &lt_to_layer_0 3 JP_EISU      &lt_to_layer_0 2 JP_KANA  &kp G          &kp D  &kp M  &kp J  &kp B
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 4 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -154,6 +154,22 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &bt BT_CLR    &trans        &trans        &trans        &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &trans
             >;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
         };
     };
 };
