@@ -17,7 +17,7 @@ layers:
   - O
   - /
   - '&mkp MB3'
-  - {t: '&to_layer_0 MINUS', h: FUNCTION}
+  - '&lt_minus_jp 1'
   - K
   - T
   - N
@@ -61,7 +61,7 @@ layers:
   - F6
   - F11
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DELETE
   - END
