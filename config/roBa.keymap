@@ -70,6 +70,22 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        semi_colon_jp: semi_colon_jp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_COLON_JP";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp JP_COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        minus_jp: minus_jp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_JP";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp JP_UNDERSCORE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -79,7 +95,7 @@
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
 &kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 TAB  &kp K          &kp T  &kp N  &kp S  &kp H
-&mt LEFT_SHIFT Y  &kp X         &kp C         &kp V                     &kp SEMICOLON  &kp MINUS                     &kp ESC               &kp G          &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
+&mt LEFT_SHIFT Y  &kp X         &kp C         &kp V                     &semi_colon_jp &minus_jp                     &kp ESC               &kp G          &kp D  &kp M  &kp J  &mt RIGHT_SHIFT B
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 JP_EISU  &lt 4 SPACE    &lt_to_layer_0 2 JP_KANA      &kp ENTER             &kp BACKSPACE                       &mo 6
             >;
 
