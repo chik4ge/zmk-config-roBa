@@ -28,8 +28,8 @@ layers:
   - C
   - V
   - {t: ;, s: ''''}
-  - {t: '&to_layer_0 LANGUAGE_2', h: ARROW}
-  - {t: '&to_layer_0 LANGUAGE_1', h: NUM_SYMBOL}
+  - {t: '&to_layer_0 LANGUAGE_1', h: ARROW}
+  - {t: '&to_layer_0 LANGUAGE_2', h: NUM_SYMBOL}
   - G
   - D
   - M
