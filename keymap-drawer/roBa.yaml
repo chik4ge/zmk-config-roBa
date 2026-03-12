@@ -28,8 +28,8 @@ layers:
   - C
   - V
   - {t: ;, s: ''''}
-  - {t: '&to_layer_0 LANGUAGE_1', h: ARROW}
-  - {t: '&to_layer_0 LANGUAGE_2', h: NUM_SYMBOL}
+  - {t: '&to_def LANGUAGE_1', h: ARROW}
+  - {t: '&to_def LANGUAGE_2', h: NUM_SYMBOL}
   - G
   - D
   - M
@@ -38,7 +38,7 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_layer_0 LS(NUMBER_1)', h: BLUETOOTH}
+  - {t: '&to_def LS(NUMBER_1)', h: BLUETOOTH}
   - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
   - ENTER
@@ -325,7 +325,7 @@ layers:
   - O
   - /
   - '&mkp MB3'
-  - {t: '&to_layer_0', h: FUNCTION}
+  - {t: '&to_mac_def', h: FUNCTION}
   - K
   - T
   - N
@@ -336,8 +336,8 @@ layers:
   - C
   - V
   - ;
-  - {t: '&to_layer_0 LC(LS(J))', h: ARROW}
-  - {t: '&to_layer_0 LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
+  - {t: '&to_mac_def LC(LS(J))', h: ARROW}
+  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
   - G
   - D
   - M
@@ -346,7 +346,7 @@ layers:
   - LEFT WIN
   - LCTRL
   - LEFT ALT
-  - {t: '&to_layer_0 LS(NUMBER_1)', h: BLUETOOTH}
+  - {t: '&to_mac_def LS(NUMBER_1)', h: BLUETOOTH}
   - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
   - ENTER
