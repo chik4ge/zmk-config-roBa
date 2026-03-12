@@ -131,6 +131,13 @@
     };
 
     behaviors {
+        encoder_scroll: encoder_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            label = "ENCODER_SCROLL";
+        };
+
         lt2def: lt2def {
             compatible = "zmk,behavior-hold-tap";
             label = "LT2DEF";
@@ -187,7 +194,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt2def 7 LS(NUMBER_1)     &kp LEFT_SHIFT  &lt 5 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_scroll>;
         };
 
         MAC_DEFAULT {
@@ -198,7 +205,7 @@
 	&kp LEFT_WIN      &kp LCTRL     &kp LEFT_ALT  &lt2mac_def 7 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 5 SPACE              &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_scroll>;
         };
 
         FUNCTION {
