@@ -53,7 +53,7 @@ layers:
   - {t: ▽, type: trans}
   - INSERT
   - HOME
-  - {t: PAGE UP, h: toggle}
+  - PAGE UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F4
@@ -65,7 +65,7 @@ layers:
   - {t: ▽, type: trans}
   - DELETE
   - END
-  - {t: PAGE DOWN, h: toggle}
+  - PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F7
