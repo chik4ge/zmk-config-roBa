@@ -29,6 +29,23 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
+// macOS US配列向け定義
+#define MAC_KANA        LC(LS(J))             // かな
+#define MAC_EISU        LC(LS(SINGLE_QUOTE))  // 英数
+#define US_TILDE        LS(GRAVE)             // ~
+#define US_PLUS         LS(EQUAL)             // +
+#define US_LPAREN       LS(NUMBER_9)          // (
+#define US_RPAREN       LS(NUMBER_0)          // )
+#define US_PIPE         LS(BACKSLASH)         // |
+#define US_AT           LS(NUMBER_2)          // @
+#define US_DQUOTE       LS(SINGLE_QUOTE)      // "
+#define US_CARET        LS(NUMBER_6)          // ^
+#define US_HASH         LS(NUMBER_3)          // #
+#define US_ASTERISK     LS(NUMBER_8)          // *
+#define US_LBRACE       LS(LEFT_BRACKET)      // {
+#define US_RBRACE       LS(RIGHT_BRACKET)     // }
+#define US_BACKQUOTE    GRAVE                 // `
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -58,6 +75,51 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&bt BT_SEL 0>, <&to 7>;
+            label = "BT_MAC";
+        };
+
+        bt_default_1: bt_default_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&bt BT_SEL 1>, <&to 0>;
+            label = "BT_DEFAULT_1";
+        };
+
+        bt_default_2: bt_default_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&bt BT_SEL 2>, <&to 0>;
+            label = "BT_DEFAULT_2";
+        };
+
+        bt_default_3: bt_default_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&bt BT_SEL 3>, <&to 0>;
+            label = "BT_DEFAULT_3";
+        };
+
+        bt_default_4: bt_default_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&bt BT_SEL 4>, <&to 0>;
+            label = "BT_DEFAULT_4";
         };
     };
 
@@ -159,10 +221,30 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &bt BT_CLR    &trans        &trans        &trans        &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &trans
+	&trans  &trans  &trans  &trans  &trans                           &bt_mac       &bt_default_1  &bt_default_2  &bt_default_3  &bt_default_4
+	&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+	&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &bt BT_CLR    &trans        &trans        &trans        &bt BT_CLR_ALL
+	&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &trans
+            >;
+        };
+
+        MAC_DEFAULT {
+            bindings = <
+	&kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
+	&kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 0       &kp K          &kp T  &kp N  &kp S  &kp H
+	&kp Y             &kp X         &kp C         &kp V                     &kp SEMICOLON  &lt_to_layer_0 3 MAC_KANA      &lt_to_layer_0 8 MAC_EISU  &kp G        &kp D  &kp M  &kp J  &kp B
+	&kp LEFT_WIN      &kp LCTRL     &kp LEFT_ALT  &lt_to_layer_0 6 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 4 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        MAC_NUM_SYMBOL {
+            bindings = <
+	&kp US_TILDE  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp US_PLUS                               &kp US_LPAREN    &kp US_RPAREN    &kp US_PIPE      &kp SINGLE_QUOTE  &kp PERCENT
+	&kp US_AT     &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp MINUS        &trans            &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH      &kp US_DQUOTE     &kp US_CARET
+	&kp US_HASH   &kp N7          &kp NUMBER_8  &kp NUMBER_9  &kp US_ASTERISK  &kp EQUAL         &trans  &kp US_LBRACE     &kp US_RBRACE      &kp BACKSLASH  &kp US_BACKQUOTE  &kp AMPERSAND
+	&kp DOLLAR    &kp LC(PERIOD)  &kp NUMBER_0  &trans        &trans           &trans            &trans  &trans                                                                   &trans
             >;
         };
     };
