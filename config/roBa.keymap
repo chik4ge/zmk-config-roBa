@@ -80,24 +80,13 @@
             tapping-term-ms = <200>;
         };
 
-        colon_jp: colon_jp {
-            compatible = "zmk,behavior-macro";
-            label = "COLON_JP";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            bindings
-                = <&macro_release &kp LSHFT>
-                , <&macro_release &kp RSHFT>
-                , <&macro_tap &kp JP_COLON>;
-        };
-
         semi_colon_jp: semi_colon_jp {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_COLON_JP";
             #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&colon_jp>;
+            bindings = <&kp SEMICOLON>, <&kp JP_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <0>;
         };
 
         minus_jp: minus_jp {
