@@ -44,6 +44,50 @@ layers:
   - ENTER
   - BACKSPACE
   - RIGHT SHIFT
+  MAC_DEFAULT:
+  - Q
+  - L
+  - U
+  - ','
+  - .
+  - F
+  - W
+  - R
+  - Z
+  - P
+  - E
+  - I
+  - A
+  - O
+  - /
+  - '&mkp MB3'
+  - {t: '&to_mac_def', h: FUNCTION}
+  - K
+  - T
+  - N
+  - S
+  - H
+  - Y
+  - X
+  - C
+  - V
+  - ;
+  - {t: '&to_mac_def LC(LS(J))', h: ARROW}
+  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
+  - G
+  - D
+  - M
+  - J
+  - B
+  - LEFT WIN
+  - LCTRL
+  - LEFT ALT
+  - {t: '&to_mac_def LS(NUMBER_1)', h: BLUETOOTH}
+  - LEFT SHIFT
+  - {t: SPACE, h: MOUSE}
+  - ENTER
+  - BACKSPACE
+  - RIGHT SHIFT
   FUNCTION:
   - {t: ▽, type: trans}
   - F1
@@ -132,44 +176,44 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  ARROW:
+  MAC_NUM_SYMBOL:
+  - Sft+`
+  - '1'
+  - '2'
+  - '3'
+  - Sft+=
+  - Sft+9
+  - Sft+0
+  - Sft+\
+  - ''''
+  - '%'
+  - Sft+2
+  - '4'
+  - '5'
+  - '6'
+  - '-'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
-  - RIGHT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - /
+  - Sft+'
+  - Sft+6
+  - Sft+3
+  - '7'
+  - '8'
+  - '9'
+  - Sft+8
+  - '='
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+[
+  - Sft+]
+  - \
+  - '`'
+  - '&'
+  - $
+  - Ctl+.
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -308,88 +352,44 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  MAC_DEFAULT:
-  - Q
-  - L
-  - U
-  - ','
-  - .
-  - F
-  - W
-  - R
-  - Z
-  - P
-  - E
-  - I
-  - A
-  - O
-  - /
-  - '&mkp MB3'
-  - {t: '&to_mac_def', h: FUNCTION}
-  - K
-  - T
-  - N
-  - S
-  - H
-  - Y
-  - X
-  - C
-  - V
-  - ;
-  - {t: '&to_mac_def LC(LS(J))', h: ARROW}
-  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
-  - G
-  - D
-  - M
-  - J
-  - B
-  - LEFT WIN
-  - LCTRL
-  - LEFT ALT
-  - {t: '&to_mac_def LS(NUMBER_1)', h: BLUETOOTH}
-  - LEFT SHIFT
-  - {t: SPACE, h: MOUSE}
-  - ENTER
-  - BACKSPACE
-  - RIGHT SHIFT
-  MAC_NUM_SYMBOL:
-  - Sft+`
-  - '1'
-  - '2'
-  - '3'
-  - Sft+=
-  - Sft+9
-  - Sft+0
-  - Sft+\
-  - ''''
-  - '%'
-  - Sft+2
-  - '4'
-  - '5'
-  - '6'
-  - '-'
+  ARROW:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - /
-  - Sft+'
-  - Sft+6
-  - Sft+3
-  - '7'
-  - '8'
-  - '9'
-  - Sft+8
-  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - Sft+[
-  - Sft+]
-  - \
-  - '`'
-  - '&'
-  - $
-  - Ctl+.
-  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
