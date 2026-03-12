@@ -70,11 +70,18 @@
 
 / {
     macros {
-        to_layer_0: to_layer_0 {
+        to_def: to_def {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+            label = "TO_DEF";
+        };
+
+        to_mac_def: to_mac_def {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_MAC_DEF";
         };
 
         bt_mac: bt_mac {
@@ -124,10 +131,19 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        lt2def: lt2def {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            label = "LT2DEF";
+            bindings = <&mo>, <&to_def>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt2mac_def: lt2mac_def {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT2MAC_DEF";
+            bindings = <&mo>, <&to_mac_def>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -167,8 +183,8 @@
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
 &kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_minus_jp 1 0        &kp K          &kp T  &kp N  &kp S  &kp H
-&kp Y             &kp X         &kp C         &kp V                     &semi_colon_jp &lt_to_layer_0 3 JP_KANA      &lt_to_layer_0 2 JP_EISU  &kp G          &kp D  &kp M  &kp J  &kp B
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 4 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
+&kp Y             &kp X         &kp C         &kp V                     &semi_colon_jp &lt2def 3 JP_KANA            &lt2def 2 JP_EISU       &kp G          &kp D  &kp M  &kp J  &kp B
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt2def 6 LS(NUMBER_1)     &kp LEFT_SHIFT  &lt 4 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -231,9 +247,9 @@
         MAC_DEFAULT {
             bindings = <
 	&kp Q             &kp L         &kp U         &kp COMMA                 &kp PERIOD                                                         &kp F          &kp W  &kp R  &kp Z  &kp P
-	&kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt_to_layer_0 1 0       &kp K          &kp T  &kp N  &kp S  &kp H
-	&kp Y             &kp X         &kp C         &kp V                     &kp SEMICOLON  &lt_to_layer_0 3 MAC_KANA      &lt_to_layer_0 8 MAC_EISU  &kp G        &kp D  &kp M  &kp J  &kp B
-	&kp LEFT_WIN      &kp LCTRL     &kp LEFT_ALT  &lt_to_layer_0 6 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 4 SPACE                 &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
+	&kp E             &kp I         &kp A         &kp O                     &kp SLASH      &mkp MB3                      &lt2mac_def 1 0         &kp K          &kp T  &kp N  &kp S  &kp H
+	&kp Y             &kp X         &kp C         &kp V                     &kp SEMICOLON  &lt2mac_def 3 MAC_KANA       &lt2mac_def 8 MAC_EISU  &kp G       &kp D  &kp M  &kp J  &kp B
+	&kp LEFT_WIN      &kp LCTRL     &kp LEFT_ALT  &lt2mac_def 6 LS(NUMBER_1)  &kp LEFT_SHIFT  &lt 4 SPACE              &kp ENTER             &kp BACKSPACE                       &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
