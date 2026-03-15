@@ -165,6 +165,15 @@
             tapping-term-ms = <200>;
         };
 
+        lt_mouse: lt_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_MOUSE";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
         semi_colon_jp: semi_colon_jp {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_COLON_JP";
@@ -191,7 +200,7 @@
                 &kp Q       &kp W          &kp U          &kp SLASH                &kp COMMA                                                &kp PERIOD      &semi_colon_jp   &kp R   &kp Z   &kp P
                 &kp E       &kp I          &kp A          &kp O                    &kp F            &mkp MB3            &lt_minus_jp 2 0    &kp K           &kp T            &kp N   &kp S   &kp H
                 &kp Y       &kp L          &kp X          &kp C                    &kp V            &lt2def 8 JP_KANA   &lt2def 3 JP_EISU   &kp G           &kp D            &kp M   &kp J   &kp B
-                &kp LCTRL   &kp LEFT_WIN   &kp LEFT_ALT   &lt2def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt 5 SPACE         &kp ENTER           &kp BACKSPACE                                    &kp RIGHT_SHIFT
+                &kp LCTRL   &kp LEFT_WIN   &kp LEFT_ALT   &lt2def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE   &kp ENTER           &kp BACKSPACE                                    &kp RIGHT_SHIFT
             >;
             sensor-bindings = <&encoder_scroll>;
         };
@@ -201,7 +210,7 @@
                 &kp Q          &kp L       &kp U          &kp SLASH                    &kp COMMA                                                          &kp PERIOD      &kp SEMICOLON   &kp R   &kp Z   &kp P
                 &kp E          &kp I       &kp A          &kp O                        &kp F            &mkp MB3                 &lt2mac_def 2 0          &kp K           &kp T           &kp N   &kp S   &kp H
                 &kp Y          &kp L       &kp X          &kp C                        &kp V            &lt2mac_def 8 MAC_KANA   &lt2mac_def 4 MAC_EISU   &kp G           &kp D           &kp M   &kp J   &kp B
-                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt 5 SPACE              &kp ENTER                &kp BACKSPACE                                   &kp RIGHT_SHIFT
+                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE        &kp ENTER                &kp BACKSPACE                                   &kp RIGHT_SHIFT
             >;
             sensor-bindings = <&encoder_scroll>;
         };
