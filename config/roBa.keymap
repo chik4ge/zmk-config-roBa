@@ -30,21 +30,8 @@
 #define JP_HANZEN     GRAVE             // 半角/全角
 
 // macOS US配列向け定義
-#define MAC_KANA     LC(LS(J))             // かな
-#define MAC_EISU     LC(LS(SINGLE_QUOTE))  // 英数
-#define US_TILDE     LS(GRAVE)             // ~
-#define US_PLUS      LS(EQUAL)             // +
-#define US_LPAREN    LS(NUMBER_9)          // (
-#define US_RPAREN    LS(NUMBER_0)          // )
-#define US_PIPE      LS(BACKSLASH)         // |
-#define US_AT        LS(NUMBER_2)          // @
-#define US_DQUOTE    LS(SINGLE_QUOTE)      // "
-#define US_CARET     LS(NUMBER_6)          // ^
-#define US_HASH      LS(NUMBER_3)          // #
-#define US_ASTERISK  LS(NUMBER_8)          // *
-#define US_LBRACE    LS(LEFT_BRACKET)      // {
-#define US_RBRACE    LS(RIGHT_BRACKET)     // }
-#define US_BACKQUOTE GRAVE                 // `
+#define MAC_KANA LC(LS(J))             // かな
+#define MAC_EISU LC(LS(SINGLE_QUOTE))  // 英数
 
 &mt {
     flavor = "balanced";
@@ -227,18 +214,18 @@
         NUM_SYMBOL {
             bindings = <
                 &kp JP_TILDE   &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3   &kp JP_PLUS                               &kp JP_LPAREN     &kp JP_RPAREN     &kp JP_PIPE     &kp JP_QUOTE       &kp PERCENT
-                &kp JP_AT      &kp NUMBER_4     &kp N5         &kp NUMBER_6   &kp MINUS         &trans         &trans   &kp JP_LBRACKET   &kp JP_RBRACKET   &kp SLASH       &kp JP_DQUOTE      &kp JP_CARET
-                &kp HASH       &kp N7           &kp NUMBER_8   &kp NUMBER_9   &kp JP_ASTERISK   &kp JP_EQUAL   &trans   &kp JP_LBRACE     &kp JP_RBRACE     &kp BACKSLASH   &kp JP_BACKQUOTE   &kp JP_AMPERSAND
+                &kp JP_AT      &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6   &kp MINUS         &trans         &trans   &kp JP_LBRACKET   &kp JP_RBRACKET   &kp SLASH       &kp JP_DQUOTE      &kp JP_CARET
+                &kp HASH       &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9   &kp JP_ASTERISK   &kp JP_EQUAL   &trans   &kp JP_LBRACE     &kp JP_RBRACE     &kp BACKSLASH   &kp JP_BACKQUOTE   &kp JP_AMPERSAND
                 &kp DOLLAR     &kp LC(PERIOD)   &kp NUMBER_0   &trans         &trans            &trans         &trans   &trans                                                                 &trans
             >;
         };
 
         MAC_NUM_SYMBOL {
             bindings = <
-                &kp US_TILDE   &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3   &kp US_PLUS                            &kp US_LPAREN      &kp US_RPAREN       &kp US_PIPE     &kp SINGLE_QUOTE   &kp PERCENT
-                &kp US_AT      &kp NUMBER_4     &kp N5         &kp NUMBER_6   &kp MINUS         &trans      &trans   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp SLASH       &kp US_DQUOTE      &kp US_CARET
-                &kp US_HASH    &kp N7           &kp NUMBER_8   &kp NUMBER_9   &kp US_ASTERISK   &kp EQUAL   &trans   &kp US_LBRACE      &kp US_RBRACE       &kp BACKSLASH   &kp US_BACKQUOTE   &kp AMPERSAND
-                &kp DOLLAR     &kp LC(PERIOD)   &kp NUMBER_0   &trans         &trans            &trans      &trans   &trans                                                                    &trans
+                &kp TILDE    &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3   &kp PLUS                            &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS   &kp PIPE        &kp SINGLE_QUOTE    &kp PERCENT
+                &kp AT       &kp NUMBER_4     &kp NUMBER_5   &kp NUMBER_6   &kp MINUS      &trans      &trans   &kp LEFT_BRACKET       &kp RIGHT_BRACKET       &kp SLASH       &kp DOUBLE_QUOTES   &kp CARET
+                &kp HASH     &kp NUMBER_7     &kp NUMBER_8   &kp NUMBER_9   &kp ASTERISK   &kp EQUAL   &trans   &kp LEFT_BRACE         &kp RIGHT_BRACE         &kp BACKSLASH   &kp GRAVE           &kp AMPERSAND
+                &kp DOLLAR   &kp LC(PERIOD)   &kp NUMBER_0   &trans         &trans         &trans      &trans   &trans                                                                             &trans
             >;
         };
 
