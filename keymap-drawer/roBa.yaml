@@ -29,7 +29,7 @@ layers:
   - C
   - V
   - {t: '&to_def LANGUAGE_1', h: ARROW}
-  - {t: '&to_def LANGUAGE_2', h: NUM_SYMBOL}
+  - BACKSPACE
   - G
   - D
   - M
@@ -42,11 +42,11 @@ layers:
   - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
   - ENTER
-  - BACKSPACE
+  - {t: '&to_def LANGUAGE_2', h: NUM_SYMBOL}
   - RIGHT SHIFT
   MAC_DEFAULT:
   - Q
-  - L
+  - W
   - U
   - /
   - ','
@@ -73,7 +73,7 @@ layers:
   - C
   - V
   - {t: '&to_mac_def LC(LS(J))', h: ARROW}
-  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
+  - BACKSPACE
   - G
   - D
   - M
@@ -86,7 +86,7 @@ layers:
   - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
   - ENTER
-  - BACKSPACE
+  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
   - RIGHT SHIFT
   FUNCTION:
   - {t: ▽, type: trans}
@@ -161,7 +161,7 @@ layers:
   - '9'
   - '"'
   - _
-  - {type: held}
+  - {t: ▽, type: trans}
   - '}'
   - '|'
   - \
@@ -174,7 +174,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   MAC_NUM_SYMBOL:
   - Sft+`
@@ -205,7 +205,7 @@ layers:
   - '9'
   - Sft+8
   - '='
-  - {type: held}
+  - {t: ▽, type: trans}
   - Sft+[
   - Sft+]
   - \
@@ -218,7 +218,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   MOUSE:
   - {t: ▽, type: trans}
