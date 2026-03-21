@@ -72,7 +72,7 @@ layers:
   - X
   - C
   - V
-  - {t: '&to_mac_def LC(LS(J))', h: ARROW}
+  - {t: '&to_mac_def LANG1', h: ARROW}
   - BACKSPACE
   - G
   - D
@@ -86,7 +86,7 @@ layers:
   - LEFT SHIFT
   - {t: SPACE, h: MOUSE}
   - ENTER
-  - {t: '&to_mac_def LC(LS(SINGLE_QUOTE))', h: MAC_NUM_SYMBOL}
+  - {t: '&to_mac_def LANG2', h: MAC_NUM_SYMBOL}
   - RIGHT SHIFT
   FUNCTION:
   - {t: ▽, type: trans}
