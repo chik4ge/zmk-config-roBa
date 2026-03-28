@@ -23,18 +23,18 @@ layers:
   - K
   - L
   - {t: ;, s: ''''}
+  - /
   - Z
   - X
   - C
   - V
-  - B
   - {t: '&to_def LANGUAGE_1', h: ARROW}
   - BACKSPACE
+  - B
   - N
   - M
   - ','
   - .
-  - /
   - LCTRL
   - LEFT WIN
   - LEFT ALT
@@ -67,18 +67,18 @@ layers:
   - K
   - L
   - ;
+  - /
   - Z
   - X
   - C
   - V
-  - B
   - {t: '&to_mac_def LANG1', h: ARROW}
   - BACKSPACE
+  - B
   - N
   - M
   - ','
   - .
-  - /
   - LEFT WIN
   - LCTRL
   - LEFT ALT
