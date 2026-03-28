@@ -3,38 +3,38 @@ layers:
   default:
   - Q
   - W
-  - U
-  - /
-  - ','
-  - .
-  - {t: ;, s: ''''}
-  - R
-  - Z
-  - P
   - E
+  - R
+  - T
+  - Y
+  - U
   - I
-  - A
   - O
+  - P
+  - A
+  - S
+  - D
   - F
+  - G
   - '&mkp MB3'
   - {t: '-', h: FUNCTION, s: Sft+0x87}
-  - K
-  - T
-  - N
-  - S
   - H
-  - Y
+  - J
+  - K
   - L
+  - {t: ;, s: ''''}
+  - Z
   - X
   - C
   - V
+  - B
   - {t: '&to_def LANGUAGE_1', h: ARROW}
   - BACKSPACE
-  - G
-  - D
+  - N
   - M
-  - J
-  - B
+  - ','
+  - .
+  - /
   - LCTRL
   - LEFT WIN
   - LEFT ALT
@@ -47,38 +47,38 @@ layers:
   MAC_DEFAULT:
   - Q
   - W
-  - U
-  - /
-  - ','
-  - .
-  - ;
-  - R
-  - Z
-  - P
   - E
-  - I
-  - A
-  - O
-  - F
-  - '&mkp MB3'
-  - {t: '&to_mac_def', h: FUNCTION}
-  - K
+  - R
   - T
-  - N
-  - S
-  - H
   - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - '&mkp MB3'
+  - {t: '-', h: FUNCTION, s: Sft+-}
+  - H
+  - J
+  - K
   - L
+  - ;
+  - Z
   - X
   - C
   - V
+  - B
   - {t: '&to_mac_def LANG1', h: ARROW}
   - BACKSPACE
-  - G
-  - D
+  - N
   - M
-  - J
-  - B
+  - ','
+  - .
+  - /
   - LEFT WIN
   - LCTRL
   - LEFT ALT
