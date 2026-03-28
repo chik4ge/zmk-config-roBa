@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: roBa}
 layers:
-  default:
+  DEF:
   - Q
   - W
   - U
@@ -17,7 +17,7 @@ layers:
   - O
   - F
   - '&mkp MB3'
-  - {t: '-', h: FUNCTION, s: Sft+0x87}
+  - {t: '-', h: FUNC, s: Sft+0x87}
   - K
   - T
   - N
@@ -38,13 +38,13 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: Sft+1, h: BLUETOOTH}
-  - BACKSPACE
-  - {t: LANGUAGE 1, h: MOUSE}
-  - {t: LANGUAGE 2, h: NUM_SYMBOL}
+  - {t: Sft+1, h: BT}
+  - BSPC
+  - {t: LANG1, h: MOUSE}
+  - {t: LANG2, h: NUM_SYM}
   - ENTER
   - RIGHT SHIFT
-  MAC_DEFAULT:
+  MAC_DEF:
   - Q
   - W
   - U
@@ -61,7 +61,7 @@ layers:
   - O
   - F
   - '&mkp MB3'
-  - {t: '-', h: FUNCTION, s: Sft+-}
+  - {t: '-', h: FUNC, s: Sft+-}
   - K
   - T
   - N
@@ -82,13 +82,13 @@ layers:
   - LEFT WIN
   - LCTRL
   - LEFT ALT
-  - {t: Sft+1, h: BLUETOOTH}
-  - BACKSPACE
+  - {t: Sft+1, h: BT}
+  - BSPC
   - {t: LANG1, h: MOUSE}
-  - {t: LANG2, h: MAC_NUM_SYMBOL}
+  - {t: LANG2, h: MAC_SYM}
   - ENTER
   - RIGHT SHIFT
-  FUNCTION:
+  FUNC:
   - {t: ▽, type: trans}
   - F1
   - F2
@@ -132,7 +132,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  NUM_SYMBOL:
+  NUM_SYM:
   - +
   - '1'
   - '2'
@@ -176,7 +176,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  MAC_NUM_SYMBOL:
+  MAC_SYM:
   - '~'
   - '1'
   - '2'
@@ -308,7 +308,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  BLUETOOTH:
+  BT:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

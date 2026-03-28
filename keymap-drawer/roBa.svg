@@ -124,8 +124,8 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 </style>
-<g transform="translate(30, 0)" class="layer-default">
-<text x="0" y="28" class="label" id="default">default:</text>
+<g transform="translate(30, 0)" class="layer-DEF">
+<text x="0" y="28" class="label" id="DEF">DEF:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -197,8 +197,8 @@ path.combo {
 <g transform="translate(448, 112)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">-</text>
-<a href="#FUNCTION">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 88%">FUNCTION</tspan></text>
+<a href="#FUNC">
+<text x="0" y="24" class="key hold layer-activator">FUNC</text>
 </a><text x="0" y="-24" class="key shifted"><tspan style="font-size: 88%">Sft+0x87</tspan></text>
 </g>
 <g transform="translate(504, 99)" class="key keypos-17">
@@ -292,28 +292,24 @@ path.combo {
 <g transform="translate(208, 225)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Sft+1</text>
-<a href="#BLUETOOTH">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 78%">BLUETOOTH</tspan></text>
+<a href="#BT">
+<text x="0" y="24" class="key hold layer-activator">BT</text>
 </a></g>
 <g transform="translate(271, 231) rotate(9.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
+<text x="0" y="0" class="key tap">BSPC</text>
 </g>
 <g transform="translate(333, 247) rotate(20.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.9em" style="font-size: 88%">LANGUAGE</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">1</tspan>
-</text>
+<text x="0" y="0" class="key tap">LANG1</text>
 <a href="#MOUSE">
 <text x="0" y="24" class="key hold layer-activator">MOUSE</text>
 </a></g>
 <g transform="translate(423, 247) rotate(-20.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.9em" style="font-size: 88%">LANGUAGE</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">2</tspan>
-</text>
-<a href="#NUM_SYMBOL">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 70%">NUM_SYMBOL</tspan></text>
+<text x="0" y="0" class="key tap">LANG2</text>
+<a href="#NUM_SYM">
+<text x="0" y="24" class="key hold layer-activator">NUM_SYM</text>
 </a></g>
 <g transform="translate(485, 230) rotate(-10.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -335,8 +331,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 339)" class="layer-MAC_DEFAULT">
-<text x="0" y="28" class="label" id="MAC_DEFAULT">MAC_DEFAULT:</text>
+<g transform="translate(30, 339)" class="layer-MAC_DEF">
+<text x="0" y="28" class="label" id="MAC_DEF">MAC_DEF:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -407,8 +403,8 @@ path.combo {
 <g transform="translate(448, 112)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">-</text>
-<a href="#FUNCTION">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 88%">FUNCTION</tspan></text>
+<a href="#FUNC">
+<text x="0" y="24" class="key hold layer-activator">FUNC</text>
 </a><text x="0" y="-24" class="key shifted">Sft+-</text>
 </g>
 <g transform="translate(504, 99)" class="key keypos-17">
@@ -502,12 +498,12 @@ path.combo {
 <g transform="translate(208, 225)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Sft+1</text>
-<a href="#BLUETOOTH">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 78%">BLUETOOTH</tspan></text>
+<a href="#BT">
+<text x="0" y="24" class="key hold layer-activator">BT</text>
 </a></g>
 <g transform="translate(271, 231) rotate(9.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
+<text x="0" y="0" class="key tap">BSPC</text>
 </g>
 <g transform="translate(333, 247) rotate(20.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -518,8 +514,8 @@ path.combo {
 <g transform="translate(423, 247) rotate(-20.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">LANG2</text>
-<a href="#MAC_NUM_SYMBOL">
-<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 64%">MAC_NUM_SY…</tspan></text>
+<a href="#MAC_SYM">
+<text x="0" y="24" class="key hold layer-activator">MAC_SYM</text>
 </a></g>
 <g transform="translate(485, 230) rotate(-10.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -541,8 +537,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 678)" class="layer-FUNCTION">
-<text x="0" y="28" class="label" id="FUNCTION">FUNCTION:</text>
+<g transform="translate(30, 678)" class="layer-FUNC">
+<text x="0" y="28" class="label" id="FUNC">FUNC:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -729,8 +725,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1017)" class="layer-NUM_SYMBOL">
-<text x="0" y="28" class="label" id="NUM_SYMBOL">NUM_SYMBOL:</text>
+<g transform="translate(30, 1017)" class="layer-NUM_SYM">
+<text x="0" y="28" class="label" id="NUM_SYM">NUM_SYM:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -915,8 +911,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1355)" class="layer-MAC_NUM_SYMBOL">
-<text x="0" y="28" class="label" id="MAC_NUM_SYMBOL">MAC_NUM_SYMBOL:</text>
+<g transform="translate(30, 1355)" class="layer-MAC_SYM">
+<text x="0" y="28" class="label" id="MAC_SYM">MAC_SYM:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1481,8 +1477,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 2372)" class="layer-BLUETOOTH">
-<text x="0" y="28" class="label" id="BLUETOOTH">BLUETOOTH:</text>
+<g transform="translate(30, 2372)" class="layer-BT">
+<text x="0" y="28" class="label" id="BT">BT:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 62)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
