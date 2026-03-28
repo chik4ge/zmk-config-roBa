@@ -237,8 +237,9 @@ docker run --rm \
     }
 
     if [[ ! -d "${WORKSPACE_DIR}/.west" ]]; then
-      rm -rf "${WORKSPACE_DIR}"
-      mkdir -p "${WORKSPACE_DIR}"
+      # WORKSPACE_DIR is the container mount point, so clear its contents
+      # instead of removing the directory itself.
+      find "${WORKSPACE_DIR}" -mindepth 1 -maxdepth 1 ! -name config ! -name state -exec rm -rf {} +
       (
         cd "${WORKSPACE_DIR}"
         west init -l "${CONFIG_DIR}"
@@ -250,9 +251,13 @@ docker run --rm \
       (
         cd "${WORKSPACE_DIR}"
         west update --fetch-opt=--filter=tree:0
-        west zephyr-export
       )
     fi
+
+    (
+      cd "${WORKSPACE_DIR}"
+      west zephyr-export
+    )
 
     rm -f "${ARTIFACT_DIR}"/roBa-*.uf2 "${ARTIFACT_DIR}"/settings-reset-*.uf2 "${ARTIFACT_DIR}"/roBa-*.bin "${ARTIFACT_DIR}"/settings-reset-*.bin
 
@@ -273,6 +278,8 @@ docker run --rm \
         ;;
     esac
   '
+
+mkdir -p "${STATE_DIR}"
 
 cat > "${STATE_FILE}" <<EOF
 prev_west_hash="${current_west_hash}"
