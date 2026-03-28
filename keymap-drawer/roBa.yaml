@@ -61,7 +61,7 @@ layers:
   - O
   - F
   - '&mkp MB3'
-  - {t: '&to_mac_def', h: FUNCTION}
+  - {t: '-', h: FUNCTION, s: Sft+-}
   - K
   - T
   - N
