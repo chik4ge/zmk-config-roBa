@@ -22,6 +22,14 @@ Build only one target:
 ./scripts/local-build.sh settings_reset
 ```
 
+When a single target is built, the script checks for mounted UF2 devices and
+prints the detected mount path without copying automatically. Copy only after
+confirming the destination:
+
+```bash
+./scripts/local-build.sh roBa_R --flash /media/chikage/XIAO-SENSE
+```
+
 Force image refresh, west update, and pristine builds:
 
 ```bash

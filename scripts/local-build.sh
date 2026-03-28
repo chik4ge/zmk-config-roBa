@@ -13,7 +13,7 @@ STATE_FILE="${STATE_DIR}/build-state.env"
 
 usage() {
   cat <<'EOF'
-Usage: scripts/local-build.sh [--pull] [--update] [--pristine] [target]
+Usage: scripts/local-build.sh [--pull] [--update] [--pristine] [--flash PATH] [target]
 
 Targets:
   all             Build all firmware targets in build.yaml
@@ -25,12 +25,14 @@ Options:
   --pull          Always pull the Docker image before building
   --update        Run west update before building
   --pristine      Force pristine builds
+  --flash PATH    Copy the built artifact to PATH after a single-target build
 EOF
 }
 
 pull_image=0
 update_workspace=0
 pristine_build=0
+flash_path=""
 target="all"
 
 while [[ $# -gt 0 ]]; do
@@ -46,6 +48,14 @@ while [[ $# -gt 0 ]]; do
     --pristine)
       pristine_build=1
       shift
+      ;;
+    --flash)
+      flash_path="${2:-}"
+      if [[ -z "${flash_path}" ]]; then
+        usage >&2
+        exit 1
+      fi
+      shift 2
       ;;
     -h|--help)
       usage
@@ -95,6 +105,34 @@ sha256_file() {
   fi
 
   sha256sum "${file}" | awk "{print \$1}"
+}
+
+artifact_path_for_target() {
+  case "$1" in
+    roBa_R)
+      printf '%s\n' "${ARTIFACT_DIR}/roBa-right.uf2"
+      ;;
+    roBa_L)
+      printf '%s\n' "${ARTIFACT_DIR}/roBa-left.uf2"
+      ;;
+    settings_reset)
+      printf '%s\n' "${ARTIFACT_DIR}/settings-reset-seeeduino_xiao_ble.uf2"
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+detect_boot_mounts() {
+  local dir
+
+  for dir in /media/*/* /run/media/*/* /mnt/*; do
+    [[ -d "${dir}" ]] || continue
+    if [[ -f "${dir}/INFO_UF2.TXT" ]] || [[ -f "${dir}/CURRENT.UF2" ]]; then
+      printf '%s\n' "${dir}"
+    fi
+  done
 }
 
 prev_west_hash=""
@@ -243,3 +281,38 @@ prev_config_hash="${current_config_hash}"
 prev_boards_hash="${current_boards_hash}"
 prev_module_hash="${current_module_hash}"
 EOF
+
+if [[ "${target}" != "all" ]]; then
+  artifact_path="$(artifact_path_for_target "${target}")"
+
+  if [[ ! -f "${artifact_path}" ]]; then
+    echo "Built artifact not found: ${artifact_path}" >&2
+    exit 1
+  fi
+
+  mapfile -t detected_mounts < <(detect_boot_mounts)
+
+  if [[ -n "${flash_path}" ]]; then
+    if [[ ! -d "${flash_path}" ]]; then
+      echo "Flash destination does not exist: ${flash_path}" >&2
+      exit 1
+    fi
+
+    cp "${artifact_path}" "${flash_path}/"
+    echo "Copied $(basename "${artifact_path}") to ${flash_path}/"
+    exit 0
+  fi
+
+  if [[ "${#detected_mounts[@]}" -eq 0 ]]; then
+    echo "No mounted UF2 device detected."
+    echo "Built artifact: ${artifact_path}"
+    exit 0
+  fi
+
+  echo "Mounted UF2 device(s) detected:"
+  printf '  %s\n' "${detected_mounts[@]}"
+  echo "Built artifact: ${artifact_path}"
+  echo "Copy destination must be confirmed before writing."
+  echo "Re-run with:"
+  echo "  ./scripts/local-build.sh ${target} --flash <mount-path>"
+fi
