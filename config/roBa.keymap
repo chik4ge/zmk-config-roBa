@@ -199,38 +199,36 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            /*
             bindings = <
                 &kp Q       &kp W          &kp U          &kp SLASH                &kp COMMA                                               &kp PERIOD          &semi_colon_jp   &kp R   &kp Z   &kp P
                 &kp E       &kp I          &kp A          &kp O                    &kp F            &mkp MB3            &lt_minus_jp 2 0   &kp K               &kp T            &kp N   &kp S   &kp H
                 &kp Y       &kp L          &kp X          &kp C                    &kp V            &lt2def 8 JP_KANA   &kp BACKSPACE      &kp G               &kp D            &kp M   &kp J   &kp B
                 &kp LCTRL   &kp LEFT_WIN   &kp LEFT_ALT   &lt2def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE   &kp ENTER          &lt2def 3 JP_EISU                                    &kp RIGHT_SHIFT
             >;
-            */
-            bindings = <
-                &kp Q       &kp W          &kp E          &kp R                    &kp T                                                   &kp Y               &kp U   &kp I       &kp O        &kp P
-                &kp A       &kp S          &kp D          &kp F                    &kp G            &mkp MB3            &lt_minus_jp 2 0   &kp H               &kp J   &kp K       &kp L        &semi_colon_jp
-                &kp SLASH   &kp Z          &kp X          &kp C                    &kp V            &lt2def 8 JP_KANA   &kp BACKSPACE      &kp B               &kp N   &kp M       &kp COMMA    &kp PERIOD
-                &kp LCTRL   &kp LEFT_WIN   &kp LEFT_ALT   &lt2def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE   &kp ENTER          &lt2def 3 JP_EISU                                    &kp RIGHT_SHIFT
-            >;
+
+            /*           bindings = <
+                &kp Q       &kp W          &kp E          &kp R                    &kp T                                                   &kp Y               &kp U   &kp I   &kp O       &kp P
+                &kp A       &kp S          &kp D          &kp F                    &kp G            &mkp MB3            &lt_minus_jp 2 0   &kp H               &kp J   &kp K   &kp L       &semi_colon_jp
+                &kp SLASH   &kp Z          &kp X          &kp C                    &kp V            &lt2def 8 JP_KANA   &kp BACKSPACE      &kp B               &kp N   &kp M   &kp COMMA   &kp PERIOD
+                &kp LCTRL   &kp LEFT_WIN   &kp LEFT_ALT   &lt2def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE   &kp ENTER          &lt2def 3 JP_EISU                               &kp RIGHT_SHIFT
+            >; */
             sensor-bindings = <&encoder_scroll>;
         };
 
         MAC_DEFAULT {
-            /*
             bindings = <
-                &kp Q          &kp W       &kp U          &kp SLASH                    &kp COMMA                                                   &kp PERIOD               &kp SEMICOLON   &kp R   &kp Z   &kp P
-                &kp E          &kp I       &kp A          &kp O                        &kp F            &mkp MB3                 &lt2mac_def 2 0   &kp K                    &kp T           &kp N   &kp S   &kp H
-                &kp Y          &kp L       &kp X          &kp C                        &kp V            &lt2mac_def 8 LANG1   &kp BACKSPACE     &kp G                    &kp D           &kp M   &kp J   &kp B
-                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE        &kp ENTER         &lt2mac_def 4 LANG2                                   &kp RIGHT_SHIFT
+                &kp Q          &kp W       &kp U          &kp SLASH                    &kp COMMA                                                &kp PERIOD            &kp SEMICOLON   &kp R   &kp Z   &kp P
+                &kp E          &kp I       &kp A          &kp O                        &kp F            &mkp MB3              &lt2mac_def 2 0   &kp K                 &kp T           &kp N   &kp S   &kp H
+                &kp Y          &kp L       &kp X          &kp C                        &kp V            &lt2mac_def 8 LANG1   &kp BACKSPACE     &kp G                 &kp D           &kp M   &kp J   &kp B
+                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE     &kp ENTER         &lt2mac_def 4 LANG2                                   &kp RIGHT_SHIFT
             >;
-            */
-            bindings = <
-                &kp Q          &kp W       &kp E          &kp R                        &kp T                                                     &kp Y                 &kp U   &kp I       &kp O        &kp P
-                &kp A          &kp S       &kp D          &kp F                        &kp G            &mkp MB3              &lt_minus_us 2 0   &kp H                 &kp J   &kp K       &kp L        &kp SEMICOLON
-                &kp SLASH      &kp Z       &kp X          &kp C                        &kp V            &lt2mac_def 8 LANG1   &kp BACKSPACE      &kp B                 &kp N   &kp M       &kp COMMA    &kp PERIOD
-                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE     &kp ENTER          &lt2mac_def 4 LANG2                                    &kp RIGHT_SHIFT
-            >;
+
+            /*             bindings = <
+                &kp Q          &kp W       &kp E          &kp R                        &kp T                                                     &kp Y                 &kp U   &kp I   &kp O       &kp P
+                &kp A          &kp S       &kp D          &kp F                        &kp G            &mkp MB3              &lt_minus_us 2 0   &kp H                 &kp J   &kp K   &kp L       &kp SEMICOLON
+                &kp SLASH      &kp Z       &kp X          &kp C                        &kp V            &lt2mac_def 8 LANG1   &kp BACKSPACE      &kp B                 &kp N   &kp M   &kp COMMA   &kp PERIOD
+                &kp LEFT_WIN   &kp LCTRL   &kp LEFT_ALT   &lt2mac_def 7 LS(NUMBER_1)   &kp LEFT_SHIFT   &lt_mouse 5 SPACE     &kp ENTER          &lt2mac_def 4 LANG2                               &kp RIGHT_SHIFT
+            >; */
             sensor-bindings = <&encoder_scroll>;
         };
 
