@@ -28,8 +28,8 @@ layers:
   - X
   - C
   - V
-  - {t: '&to_def LANGUAGE_1', h: ARROW}
-  - BACKSPACE
+  - LEFT SHIFT
+  - {t: SPACE, h: ARROW}
   - G
   - D
   - M
@@ -38,11 +38,11 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_def LS(NUMBER_1)', h: BLUETOOTH}
-  - LEFT SHIFT
-  - {t: SPACE, h: MOUSE}
+  - {t: Sft+1, h: BLUETOOTH}
+  - BACKSPACE
+  - {t: LANGUAGE 1, h: MOUSE}
+  - {t: LANGUAGE 2, h: NUM_SYMBOL}
   - ENTER
-  - {t: '&to_def LANGUAGE_2', h: NUM_SYMBOL}
   - RIGHT SHIFT
   MAC_DEFAULT:
   - Q
@@ -72,8 +72,8 @@ layers:
   - X
   - C
   - V
-  - {t: '&to_mac_def LANG1', h: ARROW}
-  - BACKSPACE
+  - LEFT SHIFT
+  - {t: SPACE, h: ARROW}
   - G
   - D
   - M
@@ -82,11 +82,11 @@ layers:
   - LEFT WIN
   - LCTRL
   - LEFT ALT
-  - {t: '&to_mac_def LS(NUMBER_1)', h: BLUETOOTH}
-  - LEFT SHIFT
-  - {t: SPACE, h: MOUSE}
+  - {t: Sft+1, h: BLUETOOTH}
+  - BACKSPACE
+  - {t: LANG1, h: MOUSE}
+  - {t: LANG2, h: MAC_NUM_SYMBOL}
   - ENTER
-  - {t: '&to_mac_def LANG2', h: MAC_NUM_SYMBOL}
   - RIGHT SHIFT
   FUNCTION:
   - {t: ▽, type: trans}
@@ -173,8 +173,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MAC_NUM_SYMBOL:
   - '~'
@@ -217,8 +217,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MOUSE:
   - {t: ▽, type: trans}
@@ -380,8 +380,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
